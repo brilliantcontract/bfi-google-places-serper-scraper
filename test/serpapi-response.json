@@ -1,0 +1,497 @@
+{
+  "search_metadata": {
+    "id": "67c20d476454becb1503c887",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/c277a266e8e81fbc/67c20d476454becb1503c887.json",
+    "created_at": "2025-02-28 19:23:51 UTC",
+    "processed_at": "2025-02-28 19:23:51 UTC",
+    "google_local_url": "https://www.google.com/search?q=churches+in+Rhode+Island&hl=en&gl=us&start=0&tbm=lcl",
+    "raw_html_file": "https://serpapi.com/searches/c277a266e8e81fbc/67c20d476454becb1503c887.html",
+    "total_time_taken": 6.49
+  },
+  "search_parameters": {
+    "engine": "google_local",
+    "q": "churches in Rhode Island",
+    "google_domain": "google.com",
+    "hl": "en",
+    "gl": "us",
+    "start": 0,
+    "device": "desktop"
+  },
+  "local_results": [
+    {
+      "position": 1,
+      "rating": 4.9,
+      "reviews": 27,
+      "reviews_original": "(27)",
+      "description": "\"A very friendly church that preaches the gospel from Gods word.\"",
+      "lsig": "AB86z5WmUX6T_bcXXY-hahGqAkb8",
+      "links": {
+        "website": "https://www.faithbaptistri.org/",
+        "directions": "https://www.google.com/maps/dir//Faith+Baptist+Church,+Warwick,+Rhode+Island,+765+Commonwealth+Ave,+Warwick,+RI+02886/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e44b80f4918cef:0x6ba6e6340cce22ea?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIAhAA&hl=en&gl=us"
+      },
+      "place_id": "7757140519419781866",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=7757140519419781866&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.69851,
+        "longitude": -71.47958
+      },
+      "title": "Faith Baptist Church, Warwick, Rhode Island",
+      "type": "Christian church",
+      "address": "Warwick, RI",
+      "phone": "(401) 738-7664",
+      "hours": "Open ? Closes 5 PM"
+    },
+    {
+      "position": 2,
+      "rating": 4.8,
+      "reviews": 32,
+      "reviews_original": "(32)",
+      "description": "\"Great folks plus the Worship in particular!\"",
+      "lsig": "AB86z5VPVqMku88PVuZM6q0kmasZ",
+      "links": {
+        "website": "http://newlifecooljc.com/",
+        "directions": "https://www.google.com/maps/dir//New+Life+Church,+157+Washington+St,+Central+Falls,+RI+02863/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e443485ba4138f:0xd44859e1489c5f6a?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIFRAA&hl=en&gl=us"
+      },
+      "place_id": "15296574958484610922",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=15296574958484610922&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.89106,
+        "longitude": -71.39236
+      },
+      "title": "New Life Church",
+      "type": "Apostolic church",
+      "address": "Central Falls, RI",
+      "phone": "(401) 729-4596"
+    },
+    {
+      "position": 3,
+      "rating": 4.8,
+      "reviews": 49,
+      "reviews_original": "(49)",
+      "description": "\"The worship is an incredible experience that moves your soul.\"",
+      "lsig": "AB86z5XSDWd7bEiHNT8pUrC-v6Tp",
+      "links": {
+        "website": "http://rcri.app/",
+        "directions": "https://www.google.com/maps/dir//Restoration+Church+of+RI,+244+Lexington+Ave,+North+Providence,+RI+02904/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e4446be35e9713:0x6130104331aa53a0?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIBxAA&hl=en&gl=us"
+      },
+      "place_id": "7003115301343220640",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=7003115301343220640&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.86821,
+        "longitude": -71.44809
+      },
+      "title": "Restoration Church of RI",
+      "type": "Church",
+      "address": "North Providence, RI",
+      "phone": "(401) 585-6343",
+      "hours": "Open ? Closes 5 PM"
+    },
+    {
+      "position": 4,
+      "rating": 4.6,
+      "reviews": 201,
+      "reviews_original": "(201)",
+      "description": "\"Friendly, loving church family with true biblical teaching.\"",
+      "lsig": "AB86z5XFGv_JBPRZta-cwLVKOcMJ",
+      "links": {
+        "website": "http://awakeningchurch.org/",
+        "directions": "https://www.google.com/maps/dir//Awakening+Church,+915+Douglas+Pike,+Smithfield,+RI+02917/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e441228aff24c9:0x256ba85daa69521c?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIFBAA&hl=en&gl=us"
+      },
+      "place_id": "2696433922155827740",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=2696433922155827740&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.912327,
+        "longitude": -71.513725
+      },
+      "title": "Awakening Church",
+      "type": "Christian church",
+      "address": "Smithfield, RI",
+      "phone": "(401) 232-5200",
+      "hours": "Open ? Closes 4:30 PM"
+    },
+    {
+      "position": 5,
+      "rating": 4.8,
+      "reviews": 38,
+      "reviews_original": "(38)",
+      "description": "\"The church is also close to where I live, making it easy for me to attend.\"",
+      "lsig": "AB86z5WAmearPPONS1f2VB80Qgqz",
+      "links": {
+        "website": "https://graceharbor.net/",
+        "directions": "https://www.google.com/maps/dir//Grace+Harbor+Church,+47+Fenner+St,+Providence,+RI+02903/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e4456d7458a835:0xe4c143745527ebf2?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIEhAA&hl=en&gl=us"
+      },
+      "place_id": "16483530278076673010",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=16483530278076673010&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.818333,
+        "longitude": -71.416725
+      },
+      "title": "Grace Harbor Church",
+      "type": "Church",
+      "address": "Providence, RI",
+      "phone": "(401) 453-0439",
+      "hours": "Open ? Closes 5 PM"
+    },
+    {
+      "position": 6,
+      "rating": 4.8,
+      "reviews": 54,
+      "reviews_original": "(54)",
+      "description": "\"Welcoming, & comfortable I love the worship & the Pastors.\"",
+      "lsig": "AB86z5U1JFlxPLm_pnHV-_FhhAc-",
+      "links": {
+        "website": "http://victorychurchri.com/",
+        "directions": "https://www.google.com/maps/dir//Victory+Church,+321+Veazie+St,+Providence,+RI+02904/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e444541dd745a1:0x71d6356cc44d4623?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIExAA&hl=en&gl=us"
+      },
+      "place_id": "8202802512568075811",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=8202802512568075811&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.85355,
+        "longitude": -71.434494
+      },
+      "title": "Victory Church",
+      "type": "Assemblies of God church",
+      "address": "Providence, RI",
+      "phone": "(401) 455-0060",
+      "hours": "Open ? Closes 5 PM"
+    },
+    {
+      "position": 7,
+      "rating": 4.5,
+      "reviews": 53,
+      "reviews_original": "(53)",
+      "description": "\"Deeply thoughtful sermons.\"",
+      "lsig": "AB86z5XhiceSrhrvX7HDYehZl38N",
+      "links": {
+        "website": "http://www.renchurchri.org/",
+        "directions": "https://www.google.com/maps/dir//Renaissance+Church,+10+Tripps+Ln,+Riverside,+RI+02915/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e44537663ee07d:0x3fb1ac925dc7e724?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIDRAA&hl=en&gl=us"
+      },
+      "place_id": "4589639239905830692",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=4589639239905830692&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.793766,
+        "longitude": -71.35202
+      },
+      "title": "Renaissance Church",
+      "type": "Church",
+      "address": "Riverside, RI",
+      "phone": "(401) 684-1388",
+      "hours": "Closed ? Opens 9 AM Sun"
+    },
+    {
+      "position": 8,
+      "rating": 4.7,
+      "reviews": 48,
+      "reviews_original": "(48)",
+      "description": "\"My favorite parts were the biblical message and a genuine sense of worship.\"",
+      "lsig": "AB86z5WLd1Y3gwyyvmqN4g32X-DL",
+      "links": {
+        "website": "http://www.gribt.com/",
+        "directions": "https://www.google.com/maps/dir//Greater+Rhode+Island+Baptist+Temple,+671+Greenville+Ave,+Johnston,+RI+02919/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e44659d83db399:0x5a237faa8def5d93?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIERAA&hl=en&gl=us"
+      },
+      "place_id": "6495175458100829587",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=6495175458100829587&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.852554,
+        "longitude": -71.513
+      },
+      "title": "Greater Rhode Island Baptist Temple",
+      "type": "Baptist church",
+      "address": "Johnston, RI",
+      "phone": "(401) 231-4796",
+      "hours": "Open ? Closes 5 PM"
+    },
+    {
+      "position": 9,
+      "rating": 4.7,
+      "reviews": 24,
+      "reviews_original": "(24)",
+      "description": "\"Great church with wonderful people who genuinely care.\"",
+      "lsig": "AB86z5WFDdet6XqpQnUDOUoMv5x8",
+      "links": {
+        "website": "https://sacredcity.church/",
+        "directions": "https://www.google.com/maps/dir//Sacred+City+Church,+10+Greene+St,+Providence,+RI+02903/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e44525e9eb4381:0x7cd2db5063094caf?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIDhAA&hl=en&gl=us"
+      },
+      "place_id": "8994492544117722287",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=8994492544117722287&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.820847,
+        "longitude": -71.41681
+      },
+      "title": "Sacred City Church",
+      "type": "Church",
+      "address": "Providence, RI",
+      "phone": "(401) 919-9319",
+      "hours": "Closed ? Opens 10:30 AM Sun"
+    },
+    {
+      "position": 10,
+      "rating": 4.6,
+      "reviews": 32,
+      "reviews_original": "(32)",
+      "description": "\"A beautiful church with beautiful music and an even better community.\"",
+      "lsig": "AB86z5XfL01iZqKoMYR2IvN-OHWN",
+      "links": {
+        "website": "http://www.centralchurch.us/",
+        "directions": "https://www.google.com/maps/dir//Central+Congregational+Church,+296+Angell+St,+Providence,+RI+02906/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e4452574dc23df:0x26cc7af5a60c7bc1?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIEBAA&hl=en&gl=us"
+      },
+      "place_id": "2795744664161647553",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=2795744664161647553&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.82902,
+        "longitude": -71.39604
+      },
+      "title": "Central Congregational Church",
+      "type": "Church",
+      "address": "Providence, RI",
+      "phone": "(401) 331-1960"
+    },
+    {
+      "position": 11,
+      "rating": 4.9,
+      "reviews": 103,
+      "reviews_original": "(103)",
+      "description": "\"Amazing worship, solid teaching and super kind and genuine people.\"",
+      "lsig": "AB86z5WQDd66MaBjwqslhJTrMgEL",
+      "links": {
+        "website": "http://www.christianhill.com/",
+        "directions": "https://www.google.com/maps/dir//Christian+Hill+Community+Church,+56+Tiogue+Ave,+West+Warwick,+RI+02893/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e44ad951451791:0x2a04e4612e1e8ce6?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIDxAA&hl=en&gl=us"
+      },
+      "place_id": "3027795955536530662",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=3027795955536530662&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.678917,
+        "longitude": -71.52934
+      },
+      "title": "Christian Hill Community Church",
+      "type": "Non-denominational church",
+      "address": "West Warwick, RI",
+      "phone": "(401) 823-0285",
+      "hours": "Closed ? Opens 9 AM Sun"
+    },
+    {
+      "position": 12,
+      "rating": 5.0,
+      "reviews": 43,
+      "reviews_original": "(43)",
+      "description": "\"A great place to worship God and have a faith community.\"",
+      "lsig": "AB86z5VBy5eUpZdFXJDTSjcNdF-G",
+      "links": {
+        "website": "https://oceanstatechurch.org/",
+        "directions": "https://www.google.com/maps/dir//Ocean+State+Church,+1150+Douglas+Pike,+Smithfield,+RI+02917/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e441efd7bdcb0d:0x927c9b8e2b249e9b?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIDBAA&hl=en&gl=us"
+      },
+      "place_id": "10555482661561081499",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=10555482661561081499&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.91998,
+        "longitude": -71.53945
+      },
+      "title": "Ocean State Church",
+      "type": "Church of Christ",
+      "address": "Smithfield, RI",
+      "hours": "Closed ? Opens 10:30 AM Sun"
+    },
+    {
+      "position": 13,
+      "rating": 4.9,
+      "reviews": 96,
+      "reviews_original": "(96)",
+      "description": "\"We love that it’s a Holy Spirit filled church that teaches biblical truth!\"",
+      "lsig": "AB86z5VzNxmNTrMgtIBSrbbct5VS",
+      "links": {
+        "website": "https://www.legacychurchri.com/",
+        "directions": "https://www.google.com/maps/dir//Legacy+Church,+Toll+Gate+High+School,+575+Centerville+Rd,+Warwick,+RI+02886/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e5b5d630c4d42d:0x1d6c436bdb062f5a?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQICxAA&hl=en&gl=us"
+      },
+      "place_id": "2120143655099838298",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=2120143655099838298&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.70376,
+        "longitude": -71.48476
+      },
+      "title": "Legacy Church",
+      "type": "Church",
+      "address": "Warwick, RI",
+      "phone": "(401) 684-8188",
+      "hours": "Closed ? Opens 9:15 AM Sun"
+    },
+    {
+      "position": 14,
+      "rating": 4.8,
+      "reviews": 22,
+      "reviews_original": "(22)",
+      "description": "\"The congregation is so welcoming.\"",
+      "lsig": "AB86z5VWPjX4BZ1KJ_1xv396a0rC",
+      "links": {
+        "website": "http://sanctuaryri.org/",
+        "directions": "https://www.google.com/maps/dir//Sanctuary+Church,+15+Hayes+St,+Providence,+RI+02908/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e445100dc0c17b:0x6679c637c718c8f2?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIBBAA&hl=en&gl=us"
+      },
+      "place_id": "7384151006916430066",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=7384151006916430066&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.829525,
+        "longitude": -71.41686
+      },
+      "title": "Sanctuary Church",
+      "type": "Christian church",
+      "address": "Providence, RI",
+      "phone": "(401) 584-3855",
+      "hours": "Closed ? Opens 8:30 AM Sun"
+    },
+    {
+      "position": 15,
+      "rating": 5.0,
+      "reviews": 24,
+      "reviews_original": "(24)",
+      "description": "\"The teaching and sermons are bible based.\"",
+      "lsig": "AB86z5WqAjwDbRnxqUFEiLyuSxV5",
+      "links": {
+        "website": "https://www.thriveculture.church/",
+        "directions": "https://www.google.com/maps/dir//Thrive+Culture+Church,+1183+Eddy+St,+Providence,+RI+02905/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e44ff5142fffbb:0xc79b8f5cd9d03f18?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIFhAA&hl=en&gl=us"
+      },
+      "place_id": "14383247463891877656",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=14383247463891877656&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.793537,
+        "longitude": -71.40434
+      },
+      "title": "Thrive Culture Church",
+      "type": "Non-denominational church",
+      "address": "Providence, RI",
+      "phone": "(401) 307-1183",
+      "hours": "Closed ? Opens 9 AM Sun"
+    },
+    {
+      "position": 16,
+      "rating": 4.8,
+      "reviews": 23,
+      "reviews_original": "(23)",
+      "lsig": "AB86z5XCHo3_2DOqvukQWtlIQW4o",
+      "links": {
+        "website": "http://thekingscathedral.com/",
+        "directions": "https://www.google.com/maps/dir//The+King's+Cathedral,+225+Dyer+St+2nd+Floor,+Providence,+RI+02903/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e44f81005d8141:0x31d7a4112f0fa644?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQICBAA&hl=en&gl=us"
+      },
+      "place_id": "3591519621562213956",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=3591519621562213956&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.81813,
+        "longitude": -71.40674
+      },
+      "title": "The King's Cathedral",
+      "type": "Church",
+      "address": "Providence, RI",
+      "phone": "(401) 780-8900"
+    },
+    {
+      "position": 17,
+      "rating": 4.8,
+      "reviews": 83,
+      "reviews_original": "(83)",
+      "description": "\"The building itself is ornate and beautiful.\"",
+      "lsig": "AB86z5U-w584viXT74OHpomCv7Tn",
+      "links": {
+        "website": "http://www.stmaryonbroadway.org/",
+        "directions": "https://www.google.com/maps/dir//Church+of+St.+Mary+on+Broadway,+538+Broadway,+Providence,+RI+02909/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e4459bed2c9a7b:0xbf0d485a3ce5e485?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIBRAA&hl=en&gl=us"
+      },
+      "place_id": "13766739188347430021",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=13766739188347430021&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.817837,
+        "longitude": -71.436714
+      },
+      "title": "Church of St. Mary on Broadway",
+      "type": "Catholic church",
+      "address": "Providence, RI",
+      "phone": "(401) 274-3434",
+      "hours": "Open ? Closes 8 PM"
+    },
+    {
+      "position": 18,
+      "rating": 4.8,
+      "reviews": 19,
+      "reviews_original": "(19)",
+      "description": "\"Great welcoming church for kids and families and all ages!\"",
+      "lsig": "AB86z5XWvEhNWonoObdW25-K9_X-",
+      "links": {
+        "website": "https://lhcc.info/",
+        "directions": "https://www.google.com/maps/dir//Living+Hope+Christian+Church,+730+S+County+Trail,+North+Kingstown,+RI+02852/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e5b6fa2aba927f:0x1d6dac65ffeb2014?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQICRAA&hl=en&gl=us"
+      },
+      "place_id": "2120540553646645268",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=2120540553646645268&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.555645,
+        "longitude": -71.51893
+      },
+      "title": "Living Hope Christian Church",
+      "type": "Christian church",
+      "address": "North Kingstown, RI",
+      "phone": "(401) 667-0775",
+      "hours": "Open ? Closes 5 PM"
+    },
+    {
+      "position": 19,
+      "rating": 4.6,
+      "reviews": 24,
+      "reviews_original": "(24)",
+      "lsig": "AB86z5XZcxP-kZ5uXb-8iqzuiN_y",
+      "links": {
+        "website": "http://christcommunitychurchri.org/",
+        "directions": "https://www.google.com/maps/dir//Christ+Community+Church,+224+Woodward+Rd,+Providence,+RI+02904/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e44b2af3025ad3:0xd5d1df41eead2157?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIAxAA&hl=en&gl=us"
+      },
+      "place_id": "15407341274481369431",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=15407341274481369431&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.858406,
+        "longitude": -71.43244
+      },
+      "title": "Christ Community Church",
+      "type": "Christian church",
+      "address": "Providence, RI",
+      "phone": "(401) 822-5233",
+      "hours": "Closed ? Opens 10 AM Sun"
+    },
+    {
+      "position": 20,
+      "rating": 4.7,
+      "reviews": 316,
+      "reviews_original": "(316)",
+      "description": "\"Incredibly built majestic Christian ?? Roman Catholic house of the Lord.\"",
+      "lsig": "AB86z5WGoIVK_JdeNf2TKDTQEmsT",
+      "links": {
+        "website": "http://www.providencecathedral.org/",
+        "directions": "https://www.google.com/maps/dir//Cathedral+of+Saints+Peter+%26+Paul,+30+Fenner+St,+Providence,+RI+02903/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89e4456d1463746f:0x79783152c3f201a7?sa=X&ved=2ahUKEwjCnf_7i-eLAxX8lokEHX57M84Q48ADegQIBhAA&hl=en&gl=us"
+      },
+      "place_id": "8752800107339055527",
+      "place_id_search": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&ludocid=8752800107339055527&q=churches+in+Rhode+Island&start=0",
+      "gps_coordinates": {
+        "latitude": 41.81931,
+        "longitude": -71.41658
+      },
+      "title": "Cathedral of Saints Peter & Paul",
+      "type": "Catholic cathedral",
+      "address": "Providence, RI",
+      "phone": "(401) 331-2434"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=churches+in+Rhode+Island&hl=en&gl=us&start=20&tbm=lcl",
+    "other_pages": {
+      "2": "https://www.google.com/search?q=churches+in+Rhode+Island&hl=en&gl=us&start=20&tbm=lcl",
+      "3": "https://www.google.com/search?q=churches+in+Rhode+Island&hl=en&gl=us&start=40&tbm=lcl",
+      "4": "https://www.google.com/search?q=churches+in+Rhode+Island&hl=en&gl=us&start=60&tbm=lcl",
+      "5": "https://www.google.com/search?q=churches+in+Rhode+Island&hl=en&gl=us&start=80&tbm=lcl"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&q=churches+in+Rhode+Island&start=20",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&q=churches+in+Rhode+Island&start=20",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&q=churches+in+Rhode+Island&start=20",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&q=churches+in+Rhode+Island&start=40",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&q=churches+in+Rhode+Island&start=60",
+      "5": "https://serpapi.com/search.json?device=desktop&engine=google_local&gl=us&google_domain=google.com&hl=en&q=churches+in+Rhode+Island&start=80"
+    }
+  }
+}
