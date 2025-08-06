@@ -1,3 +1,3 @@
-@echo off
-start /min java -jar "C:\Users\bob\Documents\contracts\java\google-places\target\google-places-1.0.0.jar"
+#@echo off
+start /min java -jar "target\bfi-google-places-serper-scraper-1.0.0.jar"
 exit
