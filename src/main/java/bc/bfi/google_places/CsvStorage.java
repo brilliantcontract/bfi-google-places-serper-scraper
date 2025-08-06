@@ -67,17 +67,17 @@ public class CsvStorage {
 
     public void append(Place place) {
         List<String> record = new ArrayList<>();
-        record.add(place.getCid());
-        record.add(place.getName());
-        record.add(place.getFullAddress());
-        record.add(place.getLatitude());
-        record.add(place.getLongitude());
-        record.add(place.getPhone());
-        record.add(place.getWebsite());
-        record.add(place.getQuery());
-        record.add(place.getRate());
-        record.add(place.getRateCounter());
-        record.add(place.getType());
+        record.add(trim(place.getCid()));
+        record.add(trim(place.getName()));
+        record.add(trim(place.getFullAddress()));
+        record.add(trim(place.getLatitude()));
+        record.add(trim(place.getLongitude()));
+        record.add(trim(place.getPhone()));
+        record.add(trim(place.getWebsite()));
+        record.add(trim(place.getQuery()));
+        record.add(trim(place.getRate()));
+        record.add(trim(place.getRateCounter()));
+        record.add(trim(place.getType()));
 
         Path path = Paths.get(STORAGE_FILE);
         try (Writer writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8, StandardOpenOption.APPEND)) {
@@ -95,5 +95,9 @@ public class CsvStorage {
         for (Place place : places) {
             append(place);
         }
+    }
+
+    private String trim(String value) {
+        return value == null ? "" : value.trim();
     }
 }
