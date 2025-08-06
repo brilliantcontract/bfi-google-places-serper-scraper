@@ -204,6 +204,13 @@ public class Main extends javax.swing.JFrame {
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
         this.serperScraper = new SerperScraper(queries, config);
 
+        // Check if report.csv already exists
+        Path reportPath = Paths.get("report.csv");
+        if (Files.exists(reportPath)) {
+            JOptionPane.showMessageDialog(null, "Please remove the report.csv file before start.", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
         if (this.jTextAreaQueries.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Queries are not loaded.", "Warding", JOptionPane.WARNING_MESSAGE);
             return;
@@ -240,6 +247,8 @@ public class Main extends javax.swing.JFrame {
                 googlePlaceScraper.startScrape();
                 break;
         }
+
+        new ReportGenerator().generate(Paths.get("initial-.csv"), reportPath);
 
         this.jTextFieldFinishTime.setText(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
         JOptionPane.showMessageDialog(null, "Scrape process completed.", "Done", JOptionPane.INFORMATION_MESSAGE);
