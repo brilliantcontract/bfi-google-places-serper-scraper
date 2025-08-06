@@ -22,7 +22,7 @@ public class ReportGenerator {
      * Generates report CSV file based on provided CSV data file.
      *
      * @param dataPath   path to CSV file with scraped data
-     * @param reportPath path to output report.csv
+     * @param reportPath path to output report-.csv
      */
     public void generate(Path dataPath, Path reportPath) {
         int total = 0;
@@ -101,7 +101,7 @@ public class ReportGenerator {
 
         try (Writer writer = Files.newBufferedWriter(reportPath, StandardCharsets.UTF_8);
                 CSVPrinter printer = new CSVPrinter(writer, CSVFormat.DEFAULT)) {
-            printer.printRecord("Name", "Filled with values", "Missing percentage");
+            printer.printRecord("Name", "Missing values", "Missing percentage");
             printer.printRecord("Total number of records in table", total, "");
             printer.printRecord("Number of records without TYPE field", noType, formatPct(noType, total, pctFormat));
             printer.printRecord("Number of records without NAME field", noName, formatPct(noName, total, pctFormat));

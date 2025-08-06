@@ -34,7 +34,7 @@ public class ReportGeneratorTest {
         new ReportGenerator().generate(data, report);
 
         List<String> reportLines = Files.readAllLines(report, StandardCharsets.UTF_8);
-        assertThat(reportLines.get(0), is("Name,Filled with values,Missing percentage"));
+        assertThat(reportLines.get(0), is("Name,Missing values,Missing percentage"));
         assertThat(reportLines, hasItems(
                 "Total number of records in table,3,",
                 "Number of records without TYPE field,1,33.33%",

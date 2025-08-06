@@ -30,9 +30,6 @@ public class JsonStorage {
                 LOGGER.log(Level.SEVERE, "Cannot create the JSON directory.", ex);
                 System.exit(1);
             }
-        } else {
-            System.err.println("json directory already exist: " + JSON_DIRECTORY);
-            System.exit(1);
         }
     }
 

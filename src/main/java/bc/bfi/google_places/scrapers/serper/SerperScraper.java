@@ -28,6 +28,7 @@ public class SerperScraper {
 
     public void startScrape() {
         LOGGER.info("Scraping strat");
+        LOGGER.log(Level.INFO, "Total queries: {0}", this.queries.getQueries().size());
 
         for (String location : this.queries.getQueries()) {
             scrapeLocation(location);

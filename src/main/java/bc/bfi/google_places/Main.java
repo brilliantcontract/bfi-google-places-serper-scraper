@@ -27,8 +27,8 @@ import java.util.List;
 
 public class Main extends javax.swing.JFrame {
 
-    private final Queries queries = new Queries();
-    private final Config config = new Config();
+    private Queries queries;
+    private Config config;
     private final GooglePlaceScraper googlePlaceScraper = null;
     private final SerpapiScraper serpapiScraper = null;
     private SerperScraper serperScraper;
@@ -202,12 +202,18 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
-        this.serperScraper = new SerperScraper(queries, config);
-
         // Check if report.csv already exists
-        Path reportPath = Paths.get("report.csv");
+        Path reportPath = Paths.get("report-.csv");
         if (Files.exists(reportPath)) {
-            JOptionPane.showMessageDialog(null, "Please remove the report.csv file before start.", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please remove the report-.csv file before start.", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if (Files.exists(Paths.get("initial-.csv"))) {
+            JOptionPane.showMessageDialog(null, "Please remove the initial-.csv file before start.", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if (Files.exists(Paths.get("json"))) {
+            JOptionPane.showMessageDialog(null, "Please remove the json directory before start.", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
@@ -215,6 +221,11 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Queries are not loaded.", "Warding", JOptionPane.WARNING_MESSAGE);
             return;
         }
+        
+        // Initialization
+        this.queries = new Queries();
+        this.config = new Config();
+        this.serperScraper = new SerperScraper(this.queries, this.config);
 
         if (this.jTextFieldCountry.getText().isEmpty()
                 || this.jTextFieldLanguage.getText().isEmpty()
@@ -262,8 +273,6 @@ public class Main extends javax.swing.JFrame {
         SwingUtilities.invokeLater(() -> {
             JFileChooser fileChooser = new JFileChooser();
 
-            fileChooser.setCurrentDirectory(new File("C:\\Users\\bob\\Documents\\contracts\\bfi\\1-google-places\\data"));
-
             FileNameExtensionFilter filter = new FileNameExtensionFilter("Text Files (*.txt)", "txt");
             fileChooser.setFileFilter(filter);
 
@@ -284,8 +293,6 @@ public class Main extends javax.swing.JFrame {
     private void jButtonLoadConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoadConfigActionPerformed
         SwingUtilities.invokeLater(() -> {
             JFileChooser fileChooser = new JFileChooser();
-
-            fileChooser.setCurrentDirectory(new File("C:\\Users\\bob\\Documents\\contracts\\bfi\\1-google-places\\data"));
 
             FileNameExtensionFilter filter = new FileNameExtensionFilter("Text Files (*.txt)", "txt");
             fileChooser.setFileFilter(filter);
