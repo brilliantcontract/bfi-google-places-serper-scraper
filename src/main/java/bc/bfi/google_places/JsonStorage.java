@@ -1,12 +1,6 @@
 package bc.bfi.google_places;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,6 +9,9 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class JsonStorage {
 
@@ -28,7 +25,8 @@ public class JsonStorage {
                 Files.createDirectories(JSON_DIRECTORY);
             } catch (IOException ex) {
                 LOGGER.log(Level.SEVERE, "Cannot create the JSON directory.", ex);
-                System.exit(1);
+                JOptionPane.showMessageDialog(null, "Cannot create the JSON directory.", "Error", JOptionPane.ERROR_MESSAGE);
+                throw new IllegalStateException("Cannot create the JSON directory.", ex);
             }
         }
     }
@@ -47,9 +45,9 @@ public class JsonStorage {
             Files.write(filePath, json.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE_NEW);
         } catch (IOException ex) {
             LOGGER.log(Level.SEVERE, "Cannot save .json file.", ex);
-            System.exit(1);
+            JOptionPane.showMessageDialog(null, "Cannot save .json file.", "Error", JOptionPane.ERROR_MESSAGE);
+            throw new IllegalStateException("Cannot save .json file.", ex);
         }
-
     }
 
 }

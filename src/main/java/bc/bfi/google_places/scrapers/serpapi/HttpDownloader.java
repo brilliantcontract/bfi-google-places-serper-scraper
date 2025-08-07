@@ -11,6 +11,7 @@ import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.core5.http.HttpEntity;
 import org.apache.hc.core5.http.ParseException;
@@ -50,7 +51,8 @@ class HttpDownloader {
                     .build();
         } catch (URISyntaxException ex) {
             LOGGER.log(Level.SEVERE, "Cannot create URI for serpapi.com service.", ex);
-            System.exit(1);
+            JOptionPane.showMessageDialog(null, "Cannot create URI for serpapi.com service.", "Error", JOptionPane.ERROR_MESSAGE);
+            throw new IllegalStateException("Cannot create URI for serpapi.com service.", ex);
         }
 
         System.out.println("JSON request to service: " + uri.toString());

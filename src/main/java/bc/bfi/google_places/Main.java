@@ -243,26 +243,31 @@ public class Main extends javax.swing.JFrame {
 
         System.out.println("SELECTED OPTION: " + this.jComboBoxScraper.getSelectedItem().toString());
 
-        this.jTextFieldStartTime.setText(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
+        try {
+            this.jTextFieldStartTime.setText(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
 
-        switch (this.jComboBoxScraper.getSelectedItem().toString().toUpperCase()) {
-            case "SERPER.DEV":
-                serperScraper.startScrape();
-                break;
+            switch (this.jComboBoxScraper.getSelectedItem().toString().toUpperCase()) {
+                case "SERPER.DEV":
+                    serperScraper.startScrape();
+                    break;
 
-            case "SERPAPI.COM":
-                serpapiScraper.startScrape();
-                break;
+                case "SERPAPI.COM":
+                    serpapiScraper.startScrape();
+                    break;
 
-            case "GOOGLE.COM/PLACES":
-                googlePlaceScraper.startScrape();
-                break;
+                case "GOOGLE.COM/PLACES":
+                    googlePlaceScraper.startScrape();
+                    break;
+            }
+
+            new ReportGenerator().generate(Paths.get("initial-.csv"), reportPath);
+
+            this.jTextFieldFinishTime.setText(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
+            JOptionPane.showMessageDialog(null, "Scrape process completed.", "Done", JOptionPane.INFORMATION_MESSAGE);
+        } catch (RuntimeException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, "Scrape process failed", ex);
+            JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
-
-        new ReportGenerator().generate(Paths.get("initial-.csv"), reportPath);
-
-        this.jTextFieldFinishTime.setText(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
-        JOptionPane.showMessageDialog(null, "Scrape process completed.", "Done", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void jComboBoxScraperActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxScraperActionPerformed
@@ -345,6 +350,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRescrapeActionPerformed
 
     public static void main(String args[]) {
+        LoggerConfig.configure();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

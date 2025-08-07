@@ -1,6 +1,5 @@
 package bc.bfi.google_places;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
@@ -8,12 +7,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 
@@ -42,7 +40,8 @@ public class CsvStorage {
                 createCsvFile();
             } catch (Exception ex) {
                 LOGGER.log(Level.SEVERE, "Cannot write to .csv file. " + ex.getMessage(), ex);
-                System.exit(1);
+                JOptionPane.showMessageDialog(null, "Cannot write to .csv file.", "Error", JOptionPane.ERROR_MESSAGE);
+                throw new IllegalStateException("Cannot write to .csv file.", ex);
             }
         }
     }
@@ -50,8 +49,10 @@ public class CsvStorage {
     private void createCsvFile() {
         Path path = Paths.get(STORAGE_FILE);
         if (Files.exists(path)) {
-            System.err.println(".csv file already exist: " + path);
-            System.exit(1);
+            String message = ".csv file already exist: " + path;
+            LOGGER.severe(message);
+            JOptionPane.showMessageDialog(null, message, "Error", JOptionPane.ERROR_MESSAGE);
+            throw new IllegalStateException(message);
         }
 
         try (Writer writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
@@ -61,7 +62,8 @@ public class CsvStorage {
             }
         } catch (IOException ex) {
             LOGGER.log(Level.SEVERE, "Cannot create .csv file", ex);
-            System.exit(1);
+            JOptionPane.showMessageDialog(null, "Cannot create .csv file", "Error", JOptionPane.ERROR_MESSAGE);
+            throw new IllegalStateException("Cannot create .csv file", ex);
         }
     }
 
@@ -87,7 +89,8 @@ public class CsvStorage {
             }
         } catch (IOException ex) {
             LOGGER.log(Level.SEVERE, "Cannot write to .csv file. " + ex.getMessage(), ex);
-            System.exit(1);
+            JOptionPane.showMessageDialog(null, "Cannot write to .csv file.", "Error", JOptionPane.ERROR_MESSAGE);
+            throw new IllegalStateException("Cannot write to .csv file.", ex);
         }
     }
 
