@@ -14,6 +14,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.lessThanOrEqualTo;
+import static org.hamcrest.Matchers.not;
 
 public class LoggerConfigTest {
 
@@ -51,5 +52,19 @@ public class LoggerConfigTest {
         List<String> lines = Files.readAllLines(logPath);
         assertThat(lines, hasSize(1));
         assertThat(lines.get(0), containsString("INFO: Test message"));
+    }
+
+    @Test
+    public void logLineContainsSimpleClassName() throws IOException {
+        Path logPath = tempFolder.getRoot().toPath().resolve("classname.log");
+        LoggerConfig.configure(logPath.toString(), 1024);
+
+        Logger logger = Logger.getLogger(LoggerConfigTest.class.getName());
+        logger.info("Simple message");
+
+        List<String> lines = Files.readAllLines(logPath);
+        assertThat(lines, hasSize(1));
+        assertThat(lines.get(0), containsString("LoggerConfigTest logLineContainsSimpleClassName INFO: Simple message"));
+        assertThat(lines.get(0), not(containsString("bc.bfi.google_places.LoggerConfigTest")));
     }
 }
