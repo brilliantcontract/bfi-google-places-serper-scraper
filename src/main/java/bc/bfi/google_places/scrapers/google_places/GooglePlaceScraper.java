@@ -20,7 +20,7 @@ public class GooglePlaceScraper {
     }
 
     public void startScrape() {
-        LOGGER.info("Scraping strat");
+        LOGGER.info("Scraping started");
 
         for (String location : this.queries.getQueries()) {
             scrapeLocation(location);
@@ -29,7 +29,7 @@ public class GooglePlaceScraper {
 
     private void scrapeLocation(String query) {
         downloader.createDriver();
-        LOGGER.log(Level.INFO, "Scrape: {0}", query);
+        LOGGER.log(Level.INFO, "Scraping query: {0}", query);
 
         downloader.load(query);
 

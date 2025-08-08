@@ -41,7 +41,7 @@ class HttpDownloader {
 
         String jsonString = json.toString();
 
-        System.out.println("JSON request to service: " + jsonString);
+        LOGGER.log(Level.INFO, "Sending request payload: {0}", jsonString);
 
         return jsonString;
     }
@@ -59,10 +59,10 @@ class HttpDownloader {
                     return EntityUtils.toString(entity, StandardCharsets.UTF_8);
                 }
             } catch (ParseException ex) {
-                LOGGER.log(Level.SEVERE, "Exception during API call.", ex);
+                LOGGER.log(Level.SEVERE, "API call to " + url + " failed", ex);
             }
         } catch (IOException ex) {
-            LOGGER.log(Level.SEVERE, "Exception during API call.", ex);
+            LOGGER.log(Level.SEVERE, "API call to " + url + " failed", ex);
         }
 
         return null;

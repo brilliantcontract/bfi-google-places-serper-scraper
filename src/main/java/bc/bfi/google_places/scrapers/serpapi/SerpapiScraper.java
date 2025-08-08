@@ -24,7 +24,7 @@ public class SerpapiScraper {
     }
 
     public void startScrape() {
-        LOGGER.info("Scraping strat");
+        LOGGER.info("Scraping started");
 
         for (String location : this.queries.getQueries()) {
             scrapeLocation(location);
@@ -32,7 +32,7 @@ public class SerpapiScraper {
     }
 
     private void scrapeLocation(String query) {
-        LOGGER.log(Level.INFO, "Scrape: {0}", query);
+        LOGGER.log(Level.INFO, "Scraping query: {0}", query);
 
         List<Place> places = new ArrayList<>();
         Integer pageNumber = 1;

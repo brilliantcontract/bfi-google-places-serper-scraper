@@ -55,7 +55,7 @@ class HttpDownloader {
             throw new IllegalStateException("Cannot create URI for serpapi.com service.", ex);
         }
 
-        System.out.println("JSON request to service: " + uri.toString());
+        LOGGER.log(Level.INFO, "Requesting URI: {0}", uri);
 
         return uri;
     }
@@ -72,10 +72,10 @@ class HttpDownloader {
                     return EntityUtils.toString(entity, StandardCharsets.UTF_8);
                 }
             } catch (ParseException ex) {
-                LOGGER.log(Level.SEVERE, "Exception during API call.", ex);
+                LOGGER.log(Level.SEVERE, "API call to " + uri + " failed", ex);
             }
         } catch (IOException ex) {
-            LOGGER.log(Level.SEVERE, "Exception during API call.", ex);
+            LOGGER.log(Level.SEVERE, "API call to " + uri + " failed", ex);
         }
 
         return null;

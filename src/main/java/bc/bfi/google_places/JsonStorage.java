@@ -24,7 +24,7 @@ public class JsonStorage {
             try {
                 Files.createDirectories(JSON_DIRECTORY);
             } catch (IOException ex) {
-                LOGGER.log(Level.SEVERE, "Cannot create the JSON directory.", ex);
+                LOGGER.log(Level.SEVERE, "Failed to create JSON directory " + JSON_DIRECTORY, ex);
                 JOptionPane.showMessageDialog(null, "Cannot create the JSON directory.", "Error", JOptionPane.ERROR_MESSAGE);
                 throw new IllegalStateException("Cannot create the JSON directory.", ex);
             }
@@ -44,7 +44,7 @@ public class JsonStorage {
         try {
             Files.write(filePath, json.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE_NEW);
         } catch (IOException ex) {
-            LOGGER.log(Level.SEVERE, "Cannot save .json file.", ex);
+            LOGGER.log(Level.SEVERE, "Failed to save JSON file " + filePath, ex);
             JOptionPane.showMessageDialog(null, "Cannot save .json file.", "Error", JOptionPane.ERROR_MESSAGE);
             throw new IllegalStateException("Cannot save .json file.", ex);
         }
