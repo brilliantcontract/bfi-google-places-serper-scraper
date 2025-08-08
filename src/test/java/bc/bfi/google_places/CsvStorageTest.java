@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.nio.file.Paths;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -22,7 +23,7 @@ public class CsvStorageTest {
 
     @Test
     public void trimsWhitespaceBeforeWriting() throws Exception {
-        Path csvPath = tempFolder.getRoot().toPath().resolve("initial-.csv");
+        Path csvPath = Paths.get("initial-.csv");
 
         Field field = CsvStorage.class.getDeclaredField("STORAGE_FILE");
         field.setAccessible(true);
@@ -66,6 +67,7 @@ public class CsvStorageTest {
             }
         } finally {
             field.set(null, original);
+            Files.delete(csvPath);
         }
     }
 }
