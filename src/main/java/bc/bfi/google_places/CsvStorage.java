@@ -39,7 +39,7 @@ public class CsvStorage {
             try {
                 createCsvFile();
             } catch (Exception ex) {
-                LOGGER.log(Level.SEVERE, "Cannot write to .csv file. " + ex.getMessage(), ex);
+                LOGGER.log(Level.SEVERE, "Failed to write to CSV file: " + STORAGE_FILE, ex);
                 JOptionPane.showMessageDialog(null, "Cannot write to .csv file.", "Error", JOptionPane.ERROR_MESSAGE);
                 throw new IllegalStateException("Cannot write to .csv file.", ex);
             }
@@ -49,7 +49,7 @@ public class CsvStorage {
     private void createCsvFile() {
         Path path = Paths.get(STORAGE_FILE);
         if (Files.exists(path)) {
-            String message = ".csv file already exist: " + path;
+            String message = "CSV file already exists: " + path;
             LOGGER.severe(message);
             JOptionPane.showMessageDialog(null, message, "Error", JOptionPane.ERROR_MESSAGE);
             throw new IllegalStateException(message);
@@ -61,7 +61,7 @@ public class CsvStorage {
                 printer.printRecord((Object[]) HEADERS);
             }
         } catch (IOException ex) {
-            LOGGER.log(Level.SEVERE, "Cannot create .csv file", ex);
+            LOGGER.log(Level.SEVERE, "Failed to create CSV file: " + path, ex);
             JOptionPane.showMessageDialog(null, "Cannot create .csv file", "Error", JOptionPane.ERROR_MESSAGE);
             throw new IllegalStateException("Cannot create .csv file", ex);
         }
@@ -88,7 +88,7 @@ public class CsvStorage {
                 printer.printRecord(record);
             }
         } catch (IOException ex) {
-            LOGGER.log(Level.SEVERE, "Cannot write to .csv file. " + ex.getMessage(), ex);
+            LOGGER.log(Level.SEVERE, "Failed to write to CSV file: " + path, ex);
             JOptionPane.showMessageDialog(null, "Cannot write to .csv file.", "Error", JOptionPane.ERROR_MESSAGE);
             throw new IllegalStateException("Cannot write to .csv file.", ex);
         }
