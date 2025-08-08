@@ -8,7 +8,6 @@ data-files/*
 
 # Java files
 *.class
-*.ics
 *.marker
 *.lombok
 *.log
@@ -23,9 +22,6 @@ logs.*.xml
 *.xsd
 
 # Multimedia files
-*.mp3
-*.mp4
-*.avi
 
 # Archive files
 *.zip
@@ -53,3 +49,4 @@ output-*.xml
 /iframe-extractor/nbproject/
 /iframe-extractor-web/nbproject/
 /library-cli/nbproject/
+*.json
