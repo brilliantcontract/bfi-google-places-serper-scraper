@@ -3,6 +3,7 @@ package bc.bfi.google_places;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Logger;
@@ -10,6 +11,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
 public class LoggerConfigTest {
@@ -35,5 +38,18 @@ public class LoggerConfigTest {
         }
 
         assertThat(Files.size(logPath), lessThanOrEqualTo(1024L));
+    }
+
+    @Test
+    public void logsAreWrittenOnSingleLine() throws IOException {
+        Path logPath = tempFolder.getRoot().toPath().resolve("single.log");
+        LoggerConfig.configure(logPath.toString(), 1024);
+
+        Logger logger = Logger.getLogger(LoggerConfigTest.class.getName());
+        logger.info("Test message");
+
+        List<String> lines = Files.readAllLines(logPath);
+        assertThat(lines, hasSize(1));
+        assertThat(lines.get(0), containsString("INFO: Test message"));
     }
 }
