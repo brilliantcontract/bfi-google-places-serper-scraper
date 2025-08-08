@@ -41,9 +41,14 @@ public class SerperScraper {
         List<Place> places = new ArrayList<>();
         Integer pageNumber = 1;
         while (true) {
+            long start = System.currentTimeMillis();
             String jsonResponse = downloader.searchPlaces(query, pageNumber, config.getLocation(), config.getCountry(), config.getLanguage());
+            long duration = System.currentTimeMillis() - start;
             jsonStorage.save(jsonResponse);
             places = parser.parse(jsonResponse, query);
+            for (Place place : places) {
+                place.setDuration(String.valueOf(duration));
+            }
             csvStorage.append(places);
 
             if (places.size() != 10) {
