@@ -15,6 +15,7 @@ public class Place {
     private String socialLinks = "";
     private String cid = "";
     private String website = "";
+    private String duration = "";
 
     public String getWebsite() {
         return website;
@@ -22,6 +23,14 @@ public class Place {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
     public String getFullAddress() {
@@ -134,6 +143,7 @@ public class Place {
         System.out.println("Social links: " + socialLinks);
         System.out.println("CID: " + cid);
         System.out.println("Website: " + website);
+        System.out.println("Duration: " + duration);
     }
 
 }

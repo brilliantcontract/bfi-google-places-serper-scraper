@@ -23,10 +23,10 @@ public class ReportGeneratorTest {
     public void generatesReportWithStatistics() throws IOException {
         Path data = tempFolder.newFile("initial-.csv").toPath();
         List<String> lines = Arrays.asList(
-                "GOOGLE_PLACE_CODE,NAME,FULL_ADDRESS,LATITUDE,LONGITUDE,PHONE,WEBSITE,QUERY,RATE,REVIEWS,TYPE",
-                "1,Name1,Address1,40.0,-70.0,+1234567890,https://ex.com,q,4.5,100,restaurant",
-                "2,,Address2,41.0,-71.0,+123-456-7890,,q,not_a_rate,101,bar",
-                "3,Name3,,lat_invalid,long_invalid,abc,https://ex.com,q,3.0,invalid_reviews,"
+                "GOOGLE_PLACE_CODE,NAME,FULL_ADDRESS,LATITUDE,LONGITUDE,PHONE,WEBSITE,QUERY,RATE,REVIEWS,TYPE,DURATION",
+                "1,Name1,Address1,40.0,-70.0,+1234567890,https://ex.com,q,4.5,100,restaurant,10",
+                "2,,Address2,41.0,-71.0,+123-456-7890,,q,not_a_rate,101,bar,20",
+                "3,Name3,,lat_invalid,long_invalid,abc,https://ex.com,q,3.0,invalid_reviews,,30"
         );
         Files.write(data, lines, StandardCharsets.UTF_8);
 

@@ -31,7 +31,8 @@ public class CsvStorage {
         "QUERY",
         "RATE",
         "REVIEWS",
-        "TYPE"
+        "TYPE",
+        "DURATION"
     };
 
     public CsvStorage() {
@@ -80,6 +81,7 @@ public class CsvStorage {
         record.add(trim(place.getRate()));
         record.add(trim(place.getRateCounter()));
         record.add(trim(place.getType()));
+        record.add(trim(place.getDuration()));
 
         Path path = Paths.get(STORAGE_FILE);
         try (Writer writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8, StandardOpenOption.APPEND)) {

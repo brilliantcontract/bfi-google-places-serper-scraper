@@ -35,11 +35,16 @@ public class GooglePlaceScraper {
 
         while (true) {
             // Go through all 10 places shown on the page.
-            while (downloader.loadNextPlaceProfile()) {
-                String webPage = downloader.fetchWebPage();
-                Place place = parser.parsePlaceProfile(webPage, downloader.getPlaceCard());
-                csvStorage.append(place);
+        while (true) {
+            long start = System.currentTimeMillis();
+            if (!downloader.loadNextPlaceProfile()) {
+                break;
             }
+            String webPage = downloader.fetchWebPage();
+            Place place = parser.parsePlaceProfile(webPage, downloader.getPlaceCard());
+            place.setDuration(String.valueOf(System.currentTimeMillis() - start));
+            csvStorage.append(place);
+        }
             
             if(downloader.hasNextPage()){
                downloader.loadNextPage(); 

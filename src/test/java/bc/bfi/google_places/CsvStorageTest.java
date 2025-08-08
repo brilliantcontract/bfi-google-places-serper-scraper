@@ -47,6 +47,7 @@ public class CsvStorageTest {
             place.setRate(" 4.5 ");
             place.setRateCounter(" 10 ");
             place.setType(" type \n");
+            place.setDuration(" 1000 ");
 
             storage.append(place);
 
@@ -64,6 +65,7 @@ public class CsvStorageTest {
                 assertThat(record.get("RATE"), is("4.5"));
                 assertThat(record.get("REVIEWS"), is("10"));
                 assertThat(record.get("TYPE"), is("type"));
+                assertThat(record.get("DURATION"), is("1000"));
             }
         } finally {
             field.set(null, original);
