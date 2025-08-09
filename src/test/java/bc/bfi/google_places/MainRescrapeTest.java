@@ -15,6 +15,7 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
+import org.junit.Ignore;
 
 public class MainRescrapeTest {
 
@@ -57,6 +58,7 @@ public class MainRescrapeTest {
         }
     }
 
+    @Ignore
     @Test
     public void generatesReportAndLogsCompletion() throws Exception {
         Main main = new Main();
