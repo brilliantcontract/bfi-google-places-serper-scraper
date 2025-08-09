@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.*;
 import java.util.List;
+import bc.bfi.google_places.BannerPrinter;
 
 public class Main extends javax.swing.JFrame {
 
@@ -263,7 +264,8 @@ public class Main extends javax.swing.JFrame {
             new ReportGenerator().generate(Paths.get("initial-.csv"), reportPath);
 
             this.jTextFieldFinishTime.setText(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
-            JOptionPane.showMessageDialog(null, "Scrape process completed.", "Done", JOptionPane.INFORMATION_MESSAGE);
+            BannerPrinter.printBanner();
+            JOptionPane.showMessageDialog(null, "Scrape process completed successfully.", "Done", JOptionPane.INFORMATION_MESSAGE);
         } catch (RuntimeException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, "Scrape process failed", ex);
             JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
