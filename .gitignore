@@ -50,3 +50,4 @@ output-*.xml
 /iframe-extractor-web/nbproject/
 /library-cli/nbproject/
 *.json
+/application.log.lck
