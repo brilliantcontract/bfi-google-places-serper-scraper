@@ -17,6 +17,7 @@ import org.apache.hc.core5.http.message.BasicHeader;
 
 import javax.json.Json;
 import javax.json.JsonObject;
+import javax.swing.JOptionPane;
 
 class HttpDownloader {
 
@@ -46,7 +47,27 @@ class HttpDownloader {
         return jsonString;
     }
 
-    private String sendPostRequest(String url, String jsonBody) {
+    String sendPostRequest(String url, String jsonBody) {
+        int[] delays = {5000, 15000, 60000};
+        for (int attempt = 0; attempt <= delays.length; attempt++) {
+            try {
+                return executePost(url, jsonBody);
+            } catch (IOException ex) {
+                LOGGER.log(Level.SEVERE, "API call to " + url + " failed", ex);
+                if (attempt == delays.length) {
+                    showError("Cannot connect to Serper service.");
+                } else {
+                    pause(delays[attempt]);
+                }
+            } catch (ParseException ex) {
+                LOGGER.log(Level.SEVERE, "API call to " + url + " failed", ex);
+                return null;
+            }
+        }
+        return null;
+    }
+
+    protected String executePost(String url, String jsonBody) throws IOException, ParseException {
         try (CloseableHttpClient httpClient = HttpClients.custom().build()) {
             HttpPost request = new HttpPost(url);
             request.addHeader(new BasicHeader("X-API-KEY", API_KEY));
@@ -58,13 +79,20 @@ class HttpDownloader {
                 if (entity != null) {
                     return EntityUtils.toString(entity, StandardCharsets.UTF_8);
                 }
-            } catch (ParseException ex) {
-                LOGGER.log(Level.SEVERE, "API call to " + url + " failed", ex);
             }
-        } catch (IOException ex) {
-            LOGGER.log(Level.SEVERE, "API call to " + url + " failed", ex);
         }
-
         return null;
+    }
+
+    protected void pause(long millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+    }
+
+    protected void showError(String message) {
+        JOptionPane.showMessageDialog(null, message, "Error", JOptionPane.ERROR_MESSAGE);
     }
 }
