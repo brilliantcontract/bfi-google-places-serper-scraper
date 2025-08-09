@@ -8,6 +8,7 @@ import bc.bfi.google_places.scrapers.google_places.GooglePlaceScraper;
 import bc.bfi.google_places.scrapers.serpapi.SerpapiScraper;
 import bc.bfi.google_places.scrapers.serper.Parser;
 import bc.bfi.google_places.scrapers.serper.SerperScraper;
+import java.awt.HeadlessException;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -345,6 +346,14 @@ public class Main extends javax.swing.JFrame {
 
                 List<Place> places = parser.parse(json);
                 csvStorage.append(places);
+            }
+
+            new ReportGenerator().generate(Paths.get("initial-.csv"), Paths.get("report-.csv"));
+            System.out.println("Re-processing completed");
+            try {
+                JOptionPane.showMessageDialog(null, "Re-processing completed", "Done", JOptionPane.INFORMATION_MESSAGE);
+            } catch (HeadlessException ex) {
+                // ignore when running in headless environment
             }
         } catch (IOException | DirectoryIteratorException e) {
             e.printStackTrace();
