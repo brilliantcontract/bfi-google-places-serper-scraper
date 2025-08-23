@@ -102,6 +102,8 @@ public class SerperScraper {
                 LOGGER.severe("Serper returns many empty values for one of field.");
                 throw new RuntimeException("Serper returns many empty values for one of field.");
             }
+        } else {
+            emptyCounters.put(field, 0);
         }
     }
 
